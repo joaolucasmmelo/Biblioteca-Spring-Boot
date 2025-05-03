@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Sistema de Empréstimo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Virtual</h1>
+        <nav>
+            <ul>
+                <li><a href="#cadastro-autor">Cadastrar Autor</a></li>
+                <li><a href="#cadastro-livro">Cadastrar Livro</a></li>
+                <li><a href="#listar-livros">Listar Livros Disponíveis</a></li>
+                <li><a href="#emprestimo">Realizar Empréstimo</a></li>
+                <li><a href="#livros-indisponiveis">Livros Indisponíveis</a></li>
+                <li><a href="#devolucao">Devolver Livro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cadastro-autor">
+            <h2>Cadastrar Autor</h2>
+            <form>
+                <label for="nomeAutor">Insira o nome do autor:</label>
+                <input type="text" id="nomeAutor" name="nomeAutor" required>
+
+                <label for="dataNascimento">Data de nascimento:</label>
+                <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+                <button type="submit">Cadastrar Autor</button>
+            </form>
+        </section>
+
+        <section id="cadastro-livro">
+            <h2>Cadastrar Livro</h2>
+            <form>
+                <label for="tituloLivro">Insira o título do livro:</label>
+                <input type="text" id="tituloLivro" name="tituloLivro" required>
+
+                <label for="autorLivro">Escolha o autor do livro:</label>
+                <select id="autorLivro" name="autorLivro">
+                    <!-- Opções inseridas via JavaScript -->
+                </select>
+
+                <button type="submit">Cadastrar Livro</button>
+            </form>
+        </section>
+
+        <section id="emprestimo">
+            <h2>Realizar Empréstimo</h2>
+            <form>
+                <label for="nomeUsuario">Informe seu nome:</label>
+                <input type="text" id="nomeUsuario" name="nomeUsuario" required>
+
+                <label for="livroEmprestimo">Escolha um livro disponível:</label>
+                <select id="livroEmprestimo" name="livroEmprestimo">
+                    <!-- Opções preenchidas dinamicamente -->
+                </select>
+
+                <button type="submit">Realizar Empréstimo</button>
+            </form>
+        </section>
+
+        <section id="devolucao">
+            <h2>Devolver Livro</h2>
+            <form>
+                <label for="livroDevolucao">Selecione o livro que deseja devolver:</label>
+                <select id="livroDevolucao" name="livroDevolucao">
+                    <!-- Lista preenchida com livros emprestados -->
+                </select>
+
+                <button type="submit">Devolver Livro</button>
+            </form>
+        </section>
+
+        <section id="listar-livros">
+            <h2>Livros Disponíveis</h2>
+            <div id="livrosDisponiveis">
+                <!-- Lista de livros gerada via JavaScript -->
+            </div>
+        </section>
+
+        <section id="livros-indisponiveis">
+            <h2>Livros Indisponíveis</h2>
+            <div id="livrosIndisponiveis">
+                <!-- Lista de livros já emprestados gerada via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sistema de Biblioteca</p>
+    </footer>
+</body>
+</html>
