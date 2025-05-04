@@ -4,21 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca - Sistema de Empréstimo</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="inputs.css">
 </head>
 <body>
     <header>
         <h1>Biblioteca Virtual</h1>
         <nav>
-            <ul>
-                <li><a href="#cadastro-autor">Cadastrar Autor</a></li>
-                <li><a href="#cadastro-livro">Cadastrar Livro</a></li>
-                <li><a href="#listar-livros">Listar Livros Disponíveis</a></li>
-                <li><a href="#emprestimo">Realizar Empréstimo</a></li>
-                <li><a href="#livros-indisponiveis">Livros Indisponíveis</a></li>
-                <li><a href="#devolucao">Devolver Livro</a></li>
-            </ul>
-        </nav>
+            <a href="http://127.0.0.1:5500/frontend/lists.html" class="botao-link">Visitar lista de Livros</a>
+        </nav>        
     </header>
 
     <main>
@@ -26,12 +19,13 @@
             <h2>Cadastrar Autor</h2>
             <form>
                 <label for="nomeAutor">Insira o nome do autor:</label>
-                <input type="text" id="nomeAutor" name="nomeAutor" required>
+                <input type="text" id="nomeAutor" name="nomeAutor" placeholder="Nome autor" required>
 
                 <label for="dataNascimento">Data de nascimento:</label>
                 <input type="date" id="dataNascimento" name="dataNascimento" required>
 
-                <button type="submit">Cadastrar Autor</button>
+                <button id="botaocadastrarautor" type="submit">Cadastrar Autor</button>
+
             </form>
         </section>
 
@@ -39,35 +33,42 @@
             <h2>Cadastrar Livro</h2>
             <form>
                 <label for="tituloLivro">Insira o título do livro:</label>
-                <input type="text" id="tituloLivro" name="tituloLivro" required>
+                <input type="text" id="tituloLivro" name="tituloLivro" placeholder="Título" required>
 
                 <label for="autorLivro">Escolha o autor do livro:</label>
-                <select id="autorLivro" name="autorLivro">
+                <select id="autorLivro" name="autorLivro" required>
                     <!-- Opções inseridas via JavaScript -->
                 </select>
 
+                <label for="imagemlivro">Escolha a foto do livro (opcional):</label>
+                <input type="file" id="imagemlivro" name="imagemlivro" accept="image/*">
+
                 <button type="submit">Cadastrar Livro</button>
+
             </form>
         </section>
 
-        <section id="emprestimo">
-            <h2>Realizar Empréstimo</h2>
+        <section id="alugar-livro">
+            <h2>Alugar Livro</h2>
             <form>
                 <label for="nomeUsuario">Informe seu nome:</label>
-                <input type="text" id="nomeUsuario" name="nomeUsuario" required>
+                <input type="text" id="nomeUsuario" name="nomeUsuario" placeholder="Seu nome" required>
 
-                <label for="livroEmprestimo">Escolha um livro disponível:</label>
-                <select id="livroEmprestimo" name="livroEmprestimo">
+                <label for="alugarlivro">Escolha um livro disponível:</label>
+                <select id="alugarlivro" name="alugarlivro">
                     <!-- Opções preenchidas dinamicamente -->
                 </select>
 
-                <button type="submit">Realizar Empréstimo</button>
+                <button type="submit">Alugar Livro</button>
             </form>
         </section>
 
         <section id="devolucao">
             <h2>Devolver Livro</h2>
             <form>
+                <label for="nomeUsuario">Informe seu nome:</label>
+                <input type="text" id="nomeUsuario" name="nomeUsuario" placeholder="Seu nome" required>
+
                 <label for="livroDevolucao">Selecione o livro que deseja devolver:</label>
                 <select id="livroDevolucao" name="livroDevolucao">
                     <!-- Lista preenchida com livros emprestados -->
@@ -76,20 +77,7 @@
                 <button type="submit">Devolver Livro</button>
             </form>
         </section>
-
-        <section id="listar-livros">
-            <h2>Livros Disponíveis</h2>
-            <div id="livrosDisponiveis">
-                <!-- Lista de livros gerada via JavaScript -->
-            </div>
-        </section>
-
-        <section id="livros-indisponiveis">
-            <h2>Livros Indisponíveis</h2>
-            <div id="livrosIndisponiveis">
-                <!-- Lista de livros já emprestados gerada via JavaScript -->
-            </div>
-        </section>
+        
     </main>
 
     <footer>
