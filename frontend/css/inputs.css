@@ -100,7 +100,7 @@ button:hover {
     border-radius: 6px;
 }
 
-#alugar-livro {
+#alugar-livro form {
     background-color: #fdfdfd;
     padding: 15px;
     border: 2px solid #ccc;
