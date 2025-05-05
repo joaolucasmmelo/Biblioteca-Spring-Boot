@@ -1,8 +1,62 @@
-#livrosDisponiveis, #livrosIndisponiveis {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Calibri', sans-serif;
+}
+
+body {
+    background-color: #ccc;
+    color: black;
+    line-height: 1.6;
+}
+
+/* conteudo principal */
+main {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    background-color: #ccc;
+}
+
+/* flex container para as duas secoes */
+.container-listas {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* cada secao ocupa cerca de metade da largura */
+.container-listas section {
+    flex: 1 1 45%;
+    background-color: #fdfdfd;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* titulos das listas */
+.container-listas section h2 {
+    background-color: #ffd000;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    color: black;
+    font-size: 22px;
+    border-bottom: 2px solid black;
+    border-radius: 8px 8px 0 0;
+}
+
+/* areas de listagem */
+#livrosDisponiveis,
+#livrosIndisponiveis {
+    padding-bottom: 80%;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #fafafa;
-    max-height: 300px;
-    overflow-y: auto;
+    background-color: #eaeaea;
+    color: gray;
 }
