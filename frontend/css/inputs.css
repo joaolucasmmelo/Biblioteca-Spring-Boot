@@ -23,12 +23,23 @@ header h1 {
     margin-bottom: 10px;
 }
 
-header nav {
-    padding-left: 30%;
+nav {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav img {
+    vertical-align: middle;
+    width: 18px;
+    padding-bottom: 3px;
 }
 
 .botao-link {
     display: inline-block;
+    justify-content: space-between;
     background-color: black;
     color: white;
     padding: 5px 10px;
@@ -36,7 +47,6 @@ header nav {
     font-weight: bold;
     border-radius: 6px;
     margin-top: 10px;
-
 }
 
 .botao-link:hover {
